@@ -1,0 +1,163 @@
+/* degrotepot.be — Levendig platform styling */
+
+/* Smooth page transitions */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(200, 16, 46, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(200, 16, 46, 0.3); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.animate-in-delay-1 { animation: fadeInUp 0.5s ease-out 0.1s both; }
+.animate-in-delay-2 { animation: fadeInUp 0.5s ease-out 0.2s both; }
+.animate-in-delay-3 { animation: fadeInUp 0.5s ease-out 0.3s both; }
+.animate-in-delay-4 { animation: fadeInUp 0.5s ease-out 0.4s both; }
+
+.animate-fade { animation: fadeIn 0.6s ease-out both; }
+.animate-slide { animation: slideInLeft 0.4s ease-out both; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* Shimmer text effect for headlines */
+.text-shimmer {
+  background: linear-gradient(90deg, #c8102e, #d4a028, #c8102e);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* Gradient backgrounds */
+.bg-hero-gradient {
+  background: linear-gradient(135deg, #1a0a0e 0%, #2d0a14 30%, #1a1a2e 70%, #0f0f1a 100%);
+}
+
+.bg-warm-gradient {
+  background: linear-gradient(135deg, #fff9f0, #fff5f5, #ffffff);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(135deg, #fffdf5, #fff8e7);
+}
+
+/* Red accent button with hover */
+.btn-lotto {
+  background: linear-gradient(135deg, #c8102e, #e8353a);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-lotto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(200, 16, 46, 0.35);
+}
+
+/* Gold accent button */
+.btn-gold {
+  background: linear-gradient(135deg, #d4a028, #e8b93a);
+  color: #1a0a0e;
+  border: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 160, 40, 0.35);
+}
+
+/* Tag pill styling */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Lotto ball decorations */
+.lotto-ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: white;
+  box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Star decoration */
+.star-icon {
+  color: #d4a028;
+  animation: star-twinkle 2s ease-in-out infinite;
+}
+.star-icon:nth-child(2) { animation-delay: 0.3s; }
+.star-icon:nth-child(3) { animation-delay: 0.6s; }
+
+/* Stat counter */
+.stat-number {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c8102e, #d4a028);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Editorial serif headers */
+.font-editorial {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #999; }
