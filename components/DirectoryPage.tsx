@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, MapPin, Users, Star, Filter, ChevronRight, Store } from 'lucide-react';
 import { PageView } from '../types';
 import { shops } from '../utils/shops';
+import AdSenseSlot from './AdSenseSlot';
 
 interface DirectoryPageProps {
   onNavigate: (view: PageView, shopSlug?: string) => void;
@@ -78,9 +79,15 @@ const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigate }) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredShops.slice(0, 30).map((shop) => (
+          {filteredShops.slice(0, 30).map((shop, index) => (
+            <React.Fragment key={shop.slug}>
+              {/* AdSense na 6e resultaat */}
+              {index === 6 && (
+                <div className="col-span-1 sm:col-span-2 lg:col-span-3">
+                  <AdSenseSlot slot="1234567890" format="auto" className="my-2" />
+                </div>
+              )}
             <button
-              key={shop.slug}
               onClick={() => onNavigate('shop', shop.slug)}
               className="bg-white rounded-2xl border border-gray-100 p-5 text-left hover:border-gray-200 hover:shadow-md transition-all group relative overflow-hidden"
             >
@@ -110,6 +117,7 @@ const DirectoryPage: React.FC<DirectoryPageProps> = ({ onNavigate }) => {
                 <ChevronRight size={15} className="text-gray-300 group-hover:text-red-400 transition ml-auto" />
               </div>
             </button>
+            </React.Fragment>
           ))}
         </div>
 

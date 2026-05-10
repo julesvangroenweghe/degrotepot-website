@@ -1,19 +1,24 @@
 <!doctype html>
-<html lang="nl" data-theme="light">
+<html lang="nl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>De Grote Pot — Speelpotten voor Belgische krantenwinkels</title>
-    <meta name="description" content="De Grote Pot is het centrale platform voor speelpotten in Belgische krantenwinkels. Beheer je speelpot digitaal, deel een QR-code en laat deelnemers automatisch hun resultaat ontvangen." />
-    <meta property="og:title" content="De Grote Pot" />
-    <meta property="og:description" content="Het platform voor speelpotten in Belgische krantenwinkels." />
-    <meta property="og:url" content="https://degrotepot.be" />
-    <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" type="text/css" />
+    <meta name="description" content="deGrotePot — het centrale register van Belgische speelpotten. Voor spelers en winkeliers." />
+    <title>deGrotePot — Speelpotten in België</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google AdSense — ACTIVEER NA GOEDKEURING -->
+    <!-- Stap 1: Vervang ca-pub-XXXXXXXXXXXXXXXX door jouw Publisher ID -->
+    <!-- Stap 2: Verwijder de comment-tags hieronder -->
+    <!--
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+         crossorigin="anonymous"></script>
+    -->
+    <!-- Stap 3: Zet ADSENSE_APPROVED = true in AdSenseSlot.tsx -->
   </head>
-  <body>
+  <body class="bg-white text-gray-900 antialiased">
     <div id="root"></div>
-    <script src="bundle.js"></script>
+    <script src="bundle.min.js"></script>
   </body>
 </html>

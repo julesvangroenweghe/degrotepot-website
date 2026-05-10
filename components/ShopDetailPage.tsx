@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Globe, ArrowLeft, Star, Users, QrCode, MessageSquare, Clock, ChevronRight, Shield, Ticket, Zap } from 'lucide-react';
 import { PageView } from '../types';
 import { shops } from '../utils/shops';
+import AdSenseSlot from './AdSenseSlot';
 
 interface ShopDetailPageProps {
   shopId: string;
@@ -283,6 +284,11 @@ const ShopDetailPage: React.FC<ShopDetailPageProps> = ({ shopId, onNavigate }) =
           </div>
         </div>
       </div>
+    </div>
+
+    {/* AdSense — onderaan pagina, breed formaat */}
+    <div className="max-w-4xl mx-auto px-4 pb-12">
+      <AdSenseSlot slot="0987654321" format="auto" className="mt-2" />
     </div>
   );
 };
